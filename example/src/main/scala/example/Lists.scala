@@ -1,4 +1,5 @@
 package example
+import scala.annotation.tailrec
 
 import common._
 
@@ -25,7 +26,19 @@ object Lists {
     * @return
     *   The sum of all elements in `xs`
     */
-  def sum(xs: List[Int]): Int = ???
+  def sum(xs: List[Int]): Int = {
+    if (xs.isEmpty) 0
+    else{
+      @tailrec
+      def sumTailRec(xs: List[Int], accum: Int): Int = {
+        if (xs.isEmpty) accum
+        else {
+          sumTailRec(xs.tail, accum + xs.head)
+        }
+      }
+      sumTailRec(xs, 0)
+    }
+  }
 
   /** This method returns the largest element in a list of integers. If the list
     * `xs` is empty it throws a `java.util.NoSuchElementException`.
@@ -42,5 +55,18 @@ object Lists {
     * @throws java.util.NoSuchElementException
     *   if `xs` is an empty list
     */
-  def max(xs: List[Int]): Int = ???
+  def max(xs: List[Int]): Int = {
+    if (xs.isEmpty) throw java.util.NoSuchElementException
+    else {
+      @tailrec
+      def maxTailRec(xs: List[Int], max: Int): Int = {
+        if (xs.isEmpty) max
+        else {
+            maxTailRec(xs.tail, if (max < xs.head) xs.head else max)
+        }
+      }
+      // We begin with the first element to handle negative numbers
+      maxTailRec(xs.tail, xs.head)
+    }
+  }
 }
