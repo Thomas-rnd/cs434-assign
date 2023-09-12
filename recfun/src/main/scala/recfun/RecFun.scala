@@ -23,7 +23,7 @@ object RecFun extends RecFunInterface:
    * Exercise 2
    */
   @tailrec
-  def balanceTailRec(chars: List[Char], accum:Int):Boolean = {
+  def balanceTailRec(chars: List[Char], accum: Int):Boolean = {
     if (chars.isEmpty) {
       return (accum == 0)
     }
@@ -48,4 +48,15 @@ object RecFun extends RecFunInterface:
   /**
    * Exercise 3
    */
-  def countChange(money: Int, coins: List[Int]): Int = ???
+  def countChange(money: Int, coins: List[Int]): Int = {
+
+    def loop(money: Int, coins: List[Int]): Int = {
+      // no valid way to make change
+      if (money < 0 || coins.isEmpty) 0
+      // we've found a valid way to make change
+      else if (money == 0) 1
+      // we explore all possible combinations of using and not using each coin
+      else loop(money, coins.tail) + loop(money - coins.head, coins)
+    }
+    loop(money, coins)
+  }
