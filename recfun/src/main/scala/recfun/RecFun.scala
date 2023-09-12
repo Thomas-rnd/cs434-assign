@@ -22,8 +22,28 @@ object RecFun extends RecFunInterface:
   /**
    * Exercise 2
    */
-  def balance(chars: List[Char]): Boolean = ???
-
+  @tailrec
+  def balanceTailRec(chars: List[Char], accum:Int):Boolean = {
+    if (chars.isEmpty) {
+      return (accum == 0)
+    }
+    else{
+      val head = chars.head
+      val res =
+      {
+        if (head == '(') accum + 1
+        //we can close a bracket only if it has already been opened (check of the order)
+        else if (head == ')' && accum > 0) accum - 1
+        else accum
+      }
+      //if we begin by closing a bracket we stop the recursion
+      if (chars.head == ')' && accum == 0) false
+      else balanceTailRec(chars.tail, res)
+    }
+  }
+  def balance(chars: List[Char]): Boolean = {
+    balanceTailRec(chars, 0)
+  }
 
   /**
    * Exercise 3
