@@ -1,0 +1,40 @@
+Summary Clean Code
+
+-----------------
+Chapter 2 : NAMES
+-----------------
+Always use relevant names (clarity). If a name requires a comment, then the name does not reveal its intent.
+	- Intention-revealing names => easier to understand code
+	- Avoid Disinformation => avoid names which can be specific in a langage
+	- Make Meaningful Distinctions => don't code for the compiler
+	- Pronounceable names => facilitate intelligent conversation 
+	- Searchable => The length of a name should correspond to the size of its scope
+	- Avoid Mental Mapping => clarity is king, write code that others can understand
+	- Pick One Word per Concept => be consistent
+	- Use Problem Domain Names => he code that has more to do with problem domain concepts should have names drawn from the problem domain (can ask a domain expert what it means)
+	- Add Meaningful Context (readers will understand that these variables are part of a larger structure)
+	- Classe : noun (should not be a verb)
+	- Method : begin with verb (Accessors, mutators, and predicates should be named for their value and prefixed with get, set, and is)
+
+---------------------
+Chapter 3 : FUNCTIONS
+---------------------
+	- A method should contains less than 30 lines of code
+	- The indent level of a function should not be greater than one or two
+	- Do one thing, Do it well, They should do it only
+	- One Level of Abstraction per Function (we need to make sure that the statements within our function are all at the same level of abstraction)
+	- Reading Code from Top to Bottom: The Stepdown Rule
+	- Use Descriptive Names => don't be scared to use long names
+	- Reduce the number of arguments
+	- Indicate the presence of side effects in its name
+	- Flag Arguments (boolean argument) ugly to avoid because it screams a function that does more than one thing
+	- Argument Objects => when a function seems to need more than two or three arguments, it is likely that some of those arguments ought to be wrapped into a class of their own.
+	- Argument Lists => If the variable arguments are all treated identically, as they are in the example above, then they are equivalent to a single argument of type List
+	- Have No Side Effects => our function promises to do one thing, but it also does other hidden things.
+	- Output Arguments => In general output arguments should be avoided. If your function must change the state of something, have it change the state of its owning object.
+	- Command Query Separation => Functions should either do something or answer something
+	- Extract Try/Catch Blocks => So it is better to extract the bodies of the try and catch blocks out into functions of their own
+	 - Error Handling Is One Thing => a function that handles errors should do nothing else
+	- Don't repeat yourself
+
+If you follow the rules herein, your functions will be short, well named, and nicely organized
