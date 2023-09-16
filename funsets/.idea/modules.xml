@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/assignment.iml" filepath="$PROJECT_DIR$/.idea/modules/assignment.iml" group="progfun-funsets" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/funsets-sources.iml" filepath="$PROJECT_DIR$/.idea/modules/funsets-sources.iml" group="progfun-funsets" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/progfun-funsets-build.iml" filepath="$PROJECT_DIR$/.idea/modules/progfun-funsets-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/recitations.iml" filepath="$PROJECT_DIR$/.idea/modules/recitations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/submission.iml" filepath="$PROJECT_DIR$/.idea/modules/submission.iml" group="progfun-funsets" />
+    </modules>
+  </component>
+</project>

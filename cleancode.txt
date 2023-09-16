@@ -1,10 +1,9 @@
-Summary Clean Code
+Summary Clean Code : Code that strives for simplicity
 
 -----------------
 Chapter 2 : NAMES
 -----------------
-Always use relevant names (clarity). If a name requires a comment, then the name does not reveal its intent.
-	- Intention-revealing names => easier to understand code
+	- Intention-revealing names => easier to understand code (clarity). If a name requires a comment, then the name does not reveal its intent.
 	- Avoid Disinformation => avoid names which can be specific in a langage
 	- Make Meaningful Distinctions => don't code for the compiler
 	- Pronounceable names => facilitate intelligent conversation 
