@@ -37,3 +37,44 @@ Chapter 3 : FUNCTIONS
 	- Don't repeat yourself
 
 If you follow the rules herein, your functions will be short, well named, and nicely organized
+
+
+---------------------
+Chapter 4 : COMMENTS
+---------------------
+	- Comments Do Not Make Up for Bad Code : Clear and expressive code with few comments is far superior to cluttered and complex code with lots of comments
+	- Explain Yourself in Code
+
+	- GOOD COMMENTS : 
+		legals comments, 
+		informative comments, 
+		explanation of intent,
+		clarification => Sometimes it is just helpful to translate the meaning of some obscure argument or return value into something that’s readable
+	- Warning of consequences
+	- Amplification => A comment may be used to amplify the importance of something that may otherwise seem inconsequential.
+
+	- BAD COMMENTS :
+		Redundant Comments : don't just describe a simple function
+		Misleading Comments : Sometimes, with all the best intentions, a programmer makes a statement in his comments that isn’t precise enough to be accurate
+		Mandated Comments : It is just plain silly to have a rule that says that every function must have a javadoc
+		Journal Comments : Sometimes people add a comment to the start of a module every time they edit it
+		Don’t Use a Comment When You Can Use a Function or a Variable
+		Non local Information
+
+
+--------------------------
+Chapter 7 : ERROR HANDLING
+--------------------------
+	- Write Your Try-Catch-Finally Statement First
+	- Use Unchecked Exceptions
+	- Provide Context with Exceptions
+	- Define Exception Classes in Terms of a Caller’s Needs => when we define exception classes in an appli- cation, our most important concern should be how they are caught
+	- Don’t Return Null => If you are tempted to return null from a method, consider throwing an exception or returning a SPECIAL CASE object instead
+
+Clean code is readable, but it must also be robust. These are not conflicting goals. We can write robust clean code if we see error handling as a separate concern, something that is viewable independently of our main logic. To the degree that we are able to do that, we can reason about it independently, and we can make great strides in the maintainability of our code.
+
+
+
+
+
+
