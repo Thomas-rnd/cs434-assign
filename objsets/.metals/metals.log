@@ -1,0 +1,29 @@
+2023.09.20 13:38:43 INFO  Started: Metals version 1.0.1 in folders '/Users/thomasrenaud/Desktop/Postech/Advanced Programming/cs434-assign/objsets' for client Visual Studio Code 1.82.2.
+sept. 20, 2023 1:38:43 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+sept. 20, 2023 1:38:43 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+sept. 20, 2023 1:38:43 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+sept. 20, 2023 1:38:44 PM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:/Users/thomasrenaud/Desktop/Postech/Advanced Programming/cs434-assign/objsets/.metals/metals (H2 2.1)
+sept. 20, 2023 1:38:44 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory allAppliedMigrations
+INFO: Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+sept. 20, 2023 1:38:44 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.011s)
+sept. 20, 2023 1:38:44 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory create
+INFO: Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+sept. 20, 2023 1:38:44 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": << Empty Schema >>
+sept. 20, 2023 1:38:44 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "1 - Create tables"
+sept. 20, 2023 1:38:44 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "2 - Server discovery"
+sept. 20, 2023 1:38:44 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "3 - Jar symbols"
+sept. 20, 2023 1:38:44 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "4 - Fingerprints"
+sept. 20, 2023 1:38:44 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.012s)
+2023.09.20 13:38:44 INFO  time: initialize in 0.45s
+2023.09.20 13:38:45 WARN  Build server is not auto-connectable.
