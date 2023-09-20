@@ -9,6 +9,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/project" />
+            <option value="$PROJECT_DIR$/recitations" />
+            <option value="$PROJECT_DIR$/submission" />
           </set>
         </option>
         <option name="sbtVersion" value="0.13.7" />

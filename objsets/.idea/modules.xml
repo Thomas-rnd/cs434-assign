@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/objsets_6294.iml" filepath="$PROJECT_DIR$/.idea/modules/objsets_6294.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/objsets_6294-build.iml" filepath="$PROJECT_DIR$/.idea/modules/objsets_6294-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/assignment.iml" filepath="$PROJECT_DIR$/.idea/modules/assignment.iml" group="progfun-objsets" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/objsets-sources.iml" filepath="$PROJECT_DIR$/.idea/modules/objsets-sources.iml" group="progfun-objsets" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/progfun-objsets-build.iml" filepath="$PROJECT_DIR$/.idea/modules/progfun-objsets-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/recitations.iml" filepath="$PROJECT_DIR$/.idea/modules/recitations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/submission.iml" filepath="$PROJECT_DIR$/.idea/modules/submission.iml" group="progfun-objsets" />
     </modules>
   </component>
 </project>
