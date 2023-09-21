@@ -43,9 +43,10 @@ If you follow the rules herein, your functions will be short, well named, and ni
 Chapter 4 : COMMENTS
 ---------------------
 	- Comments Do Not Make Up for Bad Code : Clear and expressive code with few comments is far superior to cluttered and complex code with lots of comments
-	- Explain Yourself in Code
+	- Explain Yourself in Code => function, variable
 
 	- GOOD COMMENTS : 
+		explain why ??
 		legals comments, 
 		informative comments, 
 		explanation of intent,
@@ -61,6 +62,7 @@ Chapter 4 : COMMENTS
 		Don’t Use a Comment When You Can Use a Function or a Variable
 		Non local Information
 
+Write lot of assertion => find the code invariant
 
 --------------------------
 Chapter 7 : ERROR HANDLING
