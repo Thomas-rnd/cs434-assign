@@ -84,16 +84,16 @@ The Agile and TDD move- ments have encouraged many programmers to write automate
 		- First Law You may not write production code until you have written a failing unit 		  test
 		- Second Law You may not write more of a unit test than is sufficient to fail, and 		  not compiling is failing.
 		- Third Law You may not write more production code than is sufficient to pass the 		  currently failing test.
-	 The tests and the production code are written together, with the tests just a few seconds 	 ahead of the production code.
+	 The tests and the production code are written together, with the tests just a few seconds ahead of the production code.
 	- Keeping Tests Clean => The moral of the story is simple: Test code is just as important as production code. It is not a second-class citizen. It requires thought, design, and care. It must be kept as clean as production code.
 	- Tests Enable the -ilities => You can improve that architecture and design without fear! Tests enable all the -ilities, because tests enable change.
 	- Clean Tests => Anyone who reads these tests should be able to work out what they do very quickly, without being misled or overwhelmed by details.
 	 - A Dual Standard => There are things that you might never do in a production environment that are perfectly fine in a test environment. Usually they involve issues of memory or CPU efficiency. But they never involve issues of cleanliness.
 	- One Assert per Test => best thing we can say is that the number of asserts in a test ought to be minimized
-	- Single Concept per Test => So probably the best rule is that you should minimize the number of asserts per concept and test just one con- cept per test function.
+	- Single Concept per Test => So probably the best rule is that you should minimize the number of asserts per concept and test just one concept per test function.
 	- F.I.R.S.T
 		- Fast Tests should be fast. They should run quickly. When tests run slow, you won’t 		  want to run them frequently. If you don’t run them frequently, you won’t find 		  problems early enough to fix them easily. You won’t feel as free to clean up the 		  code. Eventually the code will begin to rot.
-		- Independent Tests should not depend on each other. One test should not set up the 		  condi- tions for the next test. You should be able to run each test independently 		  and run the tests in any order you like. When tests depend on each other, then the 		  first one to fail causes a cas- cade of downstream failures, making diagnosis 		  difficult and hiding downstream defects.
+		- Independent Tests should not depend on each other. One test should not set up the 		  conditions for the next test. You should be able to run each test independently 		  and run the tests in any order you like. When tests depend on each other, then the 		  first one to fail causes a cascade of downstream failures, making diagnosis 		  difficult and hiding downstream defects.
 		- Repeatable Tests should be repeatable in any environment. You should be able to run 		  the tests in the production environment, in the QA environment, and on your laptop 		  while riding home on the train without a network. If your tests aren’t repeatable 		  in any environ- ment, then you’ll always have an excuse for why they fail. You’ll 	 	  also find yourself unable to run the tests when the environment isn’t available.
 		- Self-Validating The tests should have a boolean output. Either they pass or fail. 		  You should not have to read through a log file to tell whether the tests pass. You 		  should not have to manually compare two different text files to see whether the 		  tests pass. If the tests aren’t self-validating, then failure can become subjective 		  and running the tests can require a long manual evaluation.
 		- Timely The tests need to be written in a timely fashion. Unit tests should be 		  written just before the production code that makes them pass. If you write tests 	  	  after the production code, then you may find the production code to be hard to 		  test. You may decide that some production code is too hard to test. You may not 		  design the production code to be testable.
@@ -103,13 +103,13 @@ If you let the tests rot, then your code will rot too. Keep your tests clean.
 ---------------------
 Chapter 10 : CLASSES
 ---------------------
-	- Class Organization => Following the standard Java convention, a class should begin with a list of variables. Pub- lic static constants, if any, should come first. Then private static variables, followed by pri- vate instance variables. There is seldom a good reason to have a public variable.
+	- Class Organization => Following the standard Java convention, a class should begin with a list of variables. Pub- lic static constants, if any, should come first. Then private static variables, followed by private instance variables. There is seldom a good reason to have a public variable.
 Public functions should follow the list of variables. We like to put the private utilities called by a public function right after the public function itself. This follows the stepdown rule and helps the program read like a newspaper article.
 	- Encapsulation => we’ll first look for a way to maintain privacy. Loosening encapsulation is always a last resort. But we sometimes need to make a variable or utility function protected so that it can be accessed by a test
 	- Classes Should Be Small => The name of a class should describe what responsibilities it fulfills. We should also be able to write a brief description of the class in about 25 words
 	- The Single Responsibility Principle => We want our systems to be composed of many small classes, not a few large ones. Each small class encapsulates a single responsibility, has a single reason to change, and collaborates with a few others to achieve the desired system behaviors.
-	- Organizing for Change => We want to structure our systems so that we muck with as little as possible when we update them with new or changed features. In an ideal system, we incorporate new fea- tures by extending the system, not by making modifications to existing code.
-	- Isolating from Change => By minimizing coupling in this way, our classes adhere to another class design princi- ple known as the Dependency Inversion Principle (DIP).5 In essence, the DIP says that our classes should depend upon abstractions, not on concrete details.	
+	- Organizing for Change => We want to structure our systems so that we muck with as little as possible when we update them with new or changed features. In an ideal system, we incorporate new features by extending the system, not by making modifications to existing code.
+	- Isolating from Change => By minimizing coupling in this way, our classes adhere to another class design principle known as the Dependency Inversion Principle (DIP).5 In essence, the DIP says that our classes should depend upon abstractions, not on concrete details.	
 
 
 
