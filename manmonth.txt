@@ -1,0 +1,72 @@
+Summary Mythical Man-Month
+
+-----------------------
+Chapter 1 : The Tar Pit
+-----------------------
+The   Tar   Pit   Brooks   starts   the   book   by   discussing   the   complexity   of   software development and compares it to a tar pit that slows down progress. He notes that the fundamental problems of software engineering are not technical, but rather organizational and managerial.Brooks introduces the concept of "conceptual integrity," which refers to the consistency and coherence of the software design. He argues that achieving conceptual integrity is essential for successful software development
+
+- Large programming projects suffer management problems different in kind from small ones
+
+- An animal caught in a tar pit can’t escape. It may be strong and try for a long time, but eventually the tar pit wins. Large projects also tend to get caught in a tar pit.
+
+- It's easy for a developer to build a program that runs on his system with the input data he has, has a specialised algorithm that works only for his use case, and without documentation, thorough testing or maintenance. But making a product requires taking care of all the above, which is at least 3x the work
+
+- Instead of a single program, if you want to build a system of programs that work together, generate outputs that other programs can consume as input, and are thoroughly tested in all possible combinations with other programs, it costs at least 3x as much as a single program
+
+- What are the challenges of programming as a craft? a) It requires perfection, which few other human endeavours demand. b) The programmer’s objectives, resources and information are not under his control, but under management’s. c) Dependence on programs that are closed-source, poorly-designed, -implemented or -tested. d) The creative and fun activity is balanced by hours of tedious work like bug finding
+
+-----------------------------------
+Chapter 2 : The Mythical Man-month
+-----------------------------------
+The Mythical Man-Month In this chapter, Brooks introduces the concept of the "man-month," which is the amount of work that can be done by one person in a month. He argues that the man-month is a flawed measure of productivity, as adding more people to a project does not necessarily increase productivity. Brooks explains that adding more people to a project can lead to communication overhead, increased complexity, and decreased productivity
+
+
+Lack Of calendar time is the major issue behind the failure of any product/software
+
+1. Poor estimation techniques
+2. Progress is compared/confused with effort(s)
+3. Bad estimation leads to lack of stubbornness in top-management
+4. Bad monitoring of progress 
+5. Addition of more workforce during schedule spillage (man and months are interchangeable)
+
+Firstly - Optimism
+-----------------------------------------
+Optimism is the greatest asset and problem for programmers. Optimism can be found in the ideation stage while the optimism reduces with implementation and interaction because only when Ideas are implemented, the "incompleteness" and "inconsistencies" of the idea are known. Making the execution medium tractable is the most important principle to make the software adaptive.
+
+Secondly - Man-Month
+-----------------------------------------
+
+Workforce and Months are an interchangeable and bad estimation of effort is the other major problem compared to failures due to other things.
+
+1. If the tasks are partitionable, the addition of the workforce had a positive effect. 
+2. For unpartitionable tasks, the addition of the workforce has a "ZERO" positive effect but only a negative effect.
+3. If the tasks are partitionable but have a dependency, like communication requirement, the effect is still positive, but there is an increase in the estimation of the time.
+4. If the dependency is intertwined and the interrelationships are more, then the required effort increases as [n*(n-1)]/2. In this situation, adding more workforce will lead to anything negative but success and increases the required months to deliver the output.
+
+Thirdly - System Test
+-----------------------------------------
+
+Enough System-Test time is required to have a successful software. 
+
+The suggested scheduling is  
+1. 1/3 - Planning
+2. 1/6 - Coding
+3. 1/4 - Component test and early system test
+4. 1/4 - Full system test will all components
+
+Here 1/2 is given for testing and debugging the coded software and test the systems while the heart, coding, is provided with 1/6 of the time necessary. Planning requires 1/3 of the time.
+
+Fourthly - Gutless Estimation
+-----------------------------------------
+
+Client or Patron urgency has a great effect on the scheduling part which actually can lead to a scheduled completion plan but not the actual completion plan. Proper planning needs to be done and the estimations need to be conveyed to deliver a successful result. Publishing the reports of incidents, the time required for solving them, and development can help in solving this problem.
+
+Finally - Regenerative Schedule Disaster
+-----------------------------------------
+
+The common notion is to add more workforce when the project is behind schedule, which is wrong.
+
+In addition, the author claims that cost is a function of men and machines committed to a project, but progress is not. Men and month costs are only equivalent if the tasks are highly parallel with little communication between the individuals. Communication itself should be added to the work done. Communication also encompasses training, which is the main hurdle to adding new people to a project since it takes productive people away from their work while they instruct.
+
+
+
