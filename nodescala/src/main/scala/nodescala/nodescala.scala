@@ -10,6 +10,7 @@ import scala.collection.JavaConversions._
 import java.util.concurrent.{Executor, ThreadPoolExecutor, TimeUnit, LinkedBlockingQueue}
 import com.sun.net.httpserver.{HttpExchange, HttpHandler, HttpServer}
 import java.net.InetSocketAddress
+import scala.util.{Success, Failure}
 
 /** Contains utilities common to the NodeScala© framework.
  */
@@ -29,7 +30,26 @@ trait NodeScala {
    *  @param token        the cancellation token
    *  @param body         the response to write back
    */
-  private def respond(exchange: Exchange, token: CancellationToken, response: Response): Unit = ???
+  private def respond(exchange: Exchange, token: CancellationToken, response: Response): Unit = {
+    // Helper function to write response in parts
+    def writeResponsePart(part: String): Unit = {
+      exchange.write(part)
+      // Check if the token is canceled
+      if (token.isCancelled) {
+        // If canceled, close the exchange and stop writing
+        exchange.close()
+      }
+    }
+
+    // Iterate through the response and write it in parts
+    while (response.hasNext && !token.isCancelled) {
+      val part = response.next()
+      writeResponsePart(part)
+    }
+
+    // Close the exchange after the response is fully sent
+    exchange.close()
+  }
 
   /** A server:
    *  1) creates and starts an http listener
@@ -41,7 +61,43 @@ trait NodeScala {
    *  @param handler        a function mapping a request to a response
    *  @return               a subscription that can stop the server and all its asynchronous operations *entirely*
    */
-  def start(relativePath: String)(handler: Request => Response): Subscription = ???
+  def start(relativePath: String)(handler: Request => Response): Subscription = {
+    val listener = createListener(relativePath)
+    val server = listener.start()
+    val tokenSource = CancellationTokenSource()
+
+    // Define a recursive function to handle incoming requests
+    def handleRequests(): Unit = {
+      val requestFuture = listener.nextRequest()
+
+      requestFuture.onComplete {
+        case Success((request, exchange)) =>
+          // Handle the request using the provided handler
+          val response = handler(request)
+          // Respond asynchronously
+          Future {
+            respond(exchange, tokenSource.cancellationToken, response)
+            // Check if the token is canceled, and if not, handle more requests
+            if (!tokenSource.cancellationToken.isCancelled) {
+              handleRequests()
+            }
+          }
+        case Failure(_) =>
+        // Failed to get a request, stop handling requests
+      }
+    }
+
+    // Start handling requests
+    handleRequests()
+
+    new Subscription {
+      def unsubscribe(): Unit = {
+        // Cancel the token and stop the server
+        tokenSource.unsubscribe()
+        server.unsubscribe()
+      }
+    }
+  }
 
 }
 
