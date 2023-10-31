@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/assignment.iml" filepath="$PROJECT_DIR$/.idea/modules/assignment.iml" group="nodescala" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nodescala-build.iml" filepath="$PROJECT_DIR$/.idea/modules/nodescala-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nodescala-sources.iml" filepath="$PROJECT_DIR$/.idea/modules/nodescala-sources.iml" group="nodescala" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/submission.iml" filepath="$PROJECT_DIR$/.idea/modules/submission.iml" group="nodescala" />
+    </modules>
+  </component>
+</project>
