@@ -68,5 +68,34 @@ The common notion is to add more workforce when the project is behind schedule, 
 
 In addition, the author claims that cost is a function of men and machines committed to a project, but progress is not. Men and month costs are only equivalent if the tasks are highly parallel with little communication between the individuals. Communication itself should be added to the work done. Communication also encompasses training, which is the main hurdle to adding new people to a project since it takes productive people away from their work while they instruct.
 
+------------------------------
+Chapter 3 : The Surgical Team
+------------------------------
+Chapter 3 delves into the challenges of managing large software projects, drawing an analogy between a software team and a surgical team. Brooks emphasizes the importance of communication and coordination among team members and explores the difficulties in breaking down tasks into smaller, parallelizable units. The chapter underscores the need for a balance between individual expertise and overall project comprehension to achieve success in complex software endeavors.
 
+- High performers are 10x more productive than low.
+- A small team is one that has only one layer of management (max 10 people).
+- Big teams are unproductive and build software without conceptual integrity compared to small teams. But big teams are necessary for big projects. Otherwise, an OS can take a decade, which is too slow.
+- All programs and data should be team property, not individual property.
+- A team should be organised as a surgical team with defined roles like surgeon, nurse and anaesthesiologist, not as a hog-butchering team where everyone takes a stab at the hog. Roles could be architect, advisor, tester, documenter, toolmaker, admin, etc.
+- Everyone is not equal.
+- This reduces communication overhead: each person needs to be informed only of things relevant to his work, not everything.
+
+------------------------------------------------------
+Chapter 4 : Aristocracy, Democracy, and System Design
+------------------------------------------------------
+In Chapter 4, Brooks introduces the concepts of system architecture and design. He discusses the tensions between a project's "aristocracy," where a single visionary architect may dominate decisions, and "democracy," where input is distributed across the team. Brooks explores the challenges of achieving a balance between these approaches, emphasizing the critical role of design in software projects. The chapter underscores the importance of adaptability and the iterative nature of design processes in constructing successful software systems.
+
+- Many cathedrals are built over generations in different styles based on changing fashions and by builders bringing in their personal style and trying to “improve” what was been done before. The resulting mishmash proclaims the pride of the builders as much as the glory of God.
+- On the other hand, the great Reims cathedral stirs joy in the beholder. This comes from unity of design: 8 generations of builders sacrificed their personal preferences to respect the design already in place. The result proclaims the glory of God and his power to salvage fallen men from their pride.
+- Programs are worse than cathedrals: they degenerate quicker than centuries.
+- Conceptual integrity is the most important consideration in system design. Don’t have many good but uncoordinated ideas. Sacrifice anomalous improvements and features.
+- Adding functionality is a gain only if outweighed by the cost of searching, learning and remembering features (simplicity).
+- These two need to be considered together. It doesn’t make sense to say “My system is better because it has more functionality” or “My system is better because it’s simpler to use”. The right question to ask is “How simple is the program for a given level of functionality?”
+- A language can be too simple to the point where programs become needlessly complex to work around the limitations of the language.
+- To ensure conceptual integrity, have an architect who isn’t burdened by implementation.
+- Have an advisor who’s available to discuss, brainstorm, propose alternatives, validate, etc. The advisor is slightly junior to the architect, and the architect is the one who’s ultimately responsible.
+- Architecture is everything visible to users: UI, manuals, inputs, outputs, options etc.
+- Splitting the architect role among too many people waters down conceptual integrity.
+- Trying to rush implementation without architecture can backfire, such as taking a year more in order to save 3 months of idle time.
 
